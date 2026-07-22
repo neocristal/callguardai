@@ -1,22 +1,11 @@
-name: Create development builds
+name: Create Production Builds
 
 jobs:
-  android_development_build:
-    name: Build Android
-    type: build
+  build_android:
+    type: build # This job type creates a production build for Android
     params:
       platform: android
-      profile: development
-  ios_device_development_build:
-    name: Build iOS device
-    type: build
+  build_ios:
+    type: build # This job type creates a production build for iOS
     params:
       platform: ios
-      profile: development
-  ios_simulator_development_build:
-    name: Build iOS simulator
-    type: build
-    params:
-      platform: ios
-      profile: development-simulator
-
